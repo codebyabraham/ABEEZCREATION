@@ -1,0 +1,45 @@
+/* Portfolio.css */
+
+/* General Portfolio Container */
+.portfolio-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  /* Portfolio Segment Styling */
+  .portfolio-segment {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-segment:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .portfolio-segment img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .portfolio-segment h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Modal Image Styling */
+  .portfolio-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
