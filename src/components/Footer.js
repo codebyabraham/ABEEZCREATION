@@ -6,13 +6,19 @@ import '../App.css';
 
 const Footer = () => {
   return (
-    <footer className="text-center mt-3 py-3 bg-light">
-      <div className="social-icons">
-              <a href="#" className="icon-link"><img src={facebook} alt="Facebook" className="icon cart-icon" /></a>
-              <a href="#" className="icon-link"><img src={twitter} alt="Twitter" className="icon cart-icon" /></a>
-              <a href="#" className="icon-link"><img src={instagram} alt="Instagram" className="icon cart-icon" /></a>
-            </div>
-      <p className='mt-3'>&copy; 2024 ABEEZCREATION. All rights reserved.</p>
+    <footer className="text-center mt-3 py-3 bg-light d-flex align-items-center justify-content-center">
+      <div className="social-icons d-flex align-items-center">
+        <a href="#" className="icon-link me-3">
+          <img src={facebook} alt="Facebook" className="icon cart-icon" />
+        </a>
+        <a href="#" className="icon-link me-3">
+          <img src={twitter} alt="Twitter" className="icon cart-icon" />
+        </a>
+        <a href="#" className="icon-link">
+          <img src={instagram} alt="Instagram" className="icon cart-icon" />
+        </a>
+      </div>
+      <p className="mt-3 mb-0">&copy; 2024 ABEEZCREATION. All rights reserved.</p>
     </footer>
   );
 };

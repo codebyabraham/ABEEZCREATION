@@ -15,6 +15,26 @@ import two from '../images/2.jpg';
 import three from '../images/3.jpg';
 import four from '../images/4.jpg';
 import five from '../images/5.jpg';
+import six from '../images/6.jpg';
+import seven from '../images/7.jpg';
+import eight from '../images/8.jpg';
+import nine from '../images/9.jpg';
+import ten from '../images/10.jpg';
+import eleven from '../images/11.jpg';
+import twelve from '../images/12.jpg';
+import oneone from '../images/13.jpg';
+import onetwo from '../images/14.jpg';
+import onethree from '../images/15.jpg';
+import onefour from '../images/16.jpg';
+import onefive from '../images/17.jpg';
+import onesix from '../images/18.jpg';
+import oneseven from '../images/19.jpg';
+import oneeight from '../images/20.jpg';
+import onenine from '../images/21.jpg';
+import oneten from '../images/22.jpg';
+import oneeleven from '../images/23.jpg';
+import onetwelve from '../images/24.jpg';
+import twoone from '../images/25.jpg';
 
 
 import eightyone from '../images/81.jpg';
@@ -53,6 +73,26 @@ const portfolioData = {
     three,
     four,
     five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+    eleven,
+    twelve,
+    oneone,
+    onetwo,
+    onethree,
+    onefour,
+    onefive,
+    onesix,
+    oneseven,
+    oneeight,
+    onenine,
+    oneten,
+    oneeleven,
+    onetwelve,
+    twoone,
     // Add more portrait images
   ],
   weddings: [
