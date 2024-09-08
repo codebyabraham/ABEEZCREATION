@@ -1,0 +1,30 @@
+/* src/pages/Packages.css */
+
+.packages-container {
+    padding: 20px;
+  }
+  
+  .package-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .package-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .package-image {
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .expanded-image {
+    max-height: 500px;
+    object-fit: contain;
+    width: 100%;
+  }
+  

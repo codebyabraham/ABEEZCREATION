@@ -4,6 +4,7 @@ import twitter from '../images/icons8-twitterx-150.png';
 import instagram from '../images/icons8-instagram-150.png';
 import '../App.css';
 
+
 const Footer = () => {
   return (
     <footer className="text-center mt-3 py-3 bg-light d-flex align-items-center justify-content-center">

@@ -1,25 +1,29 @@
+// src/App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavigationBar from './components/Navbar';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
+import Packages from './pages/Packages';
 import Booking from './pages/Booking';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Contact from './pages/Contact';
+import Footer from './components/Footer'; // Import Footer
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Navbar />
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/packages" element={<Packages />} />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer /> {/* Add Footer here */}
     </Router>
   );
-}
+};
 
 export default App;
