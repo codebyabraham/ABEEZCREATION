@@ -13,7 +13,7 @@ const Footer = () => {
           <img src={facebook} alt="Facebook" className="icon cart-icon" />
         </a>
         {/* Twitter Icon with Link */}
-        <a href="https://twitter.com/codebyabraham" target="_blank" rel="noopener noreferrer" className="icon-link me-3">
+        <a href="https://twitter.com/abrahamyusuf_" target="_blank" rel="noopener noreferrer" className="icon-link me-3">
           <img src={twitter} alt="Twitter" className="icon cart-icon" />
         </a>
         {/* Instagram Icon with Link */}
