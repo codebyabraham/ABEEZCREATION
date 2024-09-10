@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import '../App.css'; // Import custom CSS for additional styling
 
 const Booking = () => {
   const [bookingData, setBookingData] = useState({
     serviceType: 'Portrait',
     date: '',
     time: '',
+    outfits: 1,
+    eventDuration: '',
+    weddingPackage: '',
+    location: '',
   });
 
   const handleChange = (e) => {
@@ -19,26 +24,95 @@ const Booking = () => {
   };
 
   return (
-    <Container className="mt-5">
-      <h2 className="text-center">Book a Session</h2>
-      <Form onSubmit={handleBooking}>
+    <Container className="mt-5 booking-container">
+      <h2 className="text-center mb-4">Book a Session</h2>
+      <Form onSubmit={handleBooking} className="booking-form">
+        {/* Service Type Selection */}
         <Form.Group controlId="formServiceType">
           <Form.Label>Service Type</Form.Label>
           <Form.Control as="select" name="serviceType" value={bookingData.serviceType} onChange={handleChange}>
             <option>Portrait</option>
+            <option>Family Portrait</option>
+            <option>Pre-Wedding</option>
+            <option>Baby</option>
+            <option>Maternity</option>
             <option>Wedding</option>
             <option>Event</option>
           </Form.Control>
         </Form.Group>
-        <Form.Group controlId="formDate">
-          <Form.Label>Date</Form.Label>
-          <Form.Control type="date" name="date" value={bookingData.date} onChange={handleChange} required />
+
+        {/* Conditional Fields Based on Service Type */}
+        {(bookingData.serviceType === 'Portrait' ||
+          bookingData.serviceType === 'Family Portrait' ||
+          bookingData.serviceType === 'Pre-Wedding' ||
+          bookingData.serviceType === 'Baby' ||
+          bookingData.serviceType === 'Maternity') && (
+          <Form.Group controlId="formOutfits">
+            <Form.Label>Number of Outfits</Form.Label>
+            <Form.Control type="number" name="outfits" min="1" max="10" value={bookingData.outfits} onChange={handleChange} />
+          </Form.Group>
+        )}
+
+        {bookingData.serviceType === 'Wedding' && (
+          <Form.Group controlId="formWeddingPackage">
+            <Form.Label>Wedding Package</Form.Label>
+            <Form.Control as="select" name="weddingPackage" value={bookingData.weddingPackage} onChange={handleChange}>
+              <option>Basic</option>
+              <option>Standard</option>
+              <option>Premium</option>
+              <option>Platinum</option>
+            </Form.Control>
+          </Form.Group>
+        )}
+
+        {bookingData.serviceType === 'Event' && (
+          <Form.Group controlId="formEventDuration">
+            <Form.Label>Event Duration</Form.Label>
+            <Form.Control as="select" name="eventDuration" value={bookingData.eventDuration} onChange={handleChange}>
+              <option>1 Hour</option>
+              <option>2 Hours</option>
+              <option>Half Day</option>
+              <option>Full Day</option>
+            </Form.Control>
+          </Form.Group>
+        )}
+
+        {/* Location Selection (Disabled if Service Type is Wedding) */}
+        <Form.Group controlId="formLocation">
+          <Form.Label>Location</Form.Label>
+          <Form.Control
+            as="select"
+            name="location"
+            value={bookingData.location}
+            onChange={handleChange}
+            disabled={bookingData.serviceType === 'Wedding'} // Disable if Wedding is selected
+          >
+            <option value="">Please Select</option> {/* Default option */}
+            <option>Outdoor</option>
+            <option>Studio</option>
+          </Form.Control>
         </Form.Group>
-        <Form.Group controlId="formTime">
-          <Form.Label>Time</Form.Label>
-          <Form.Control type="time" name="time" value={bookingData.time} onChange={handleChange} required />
-        </Form.Group>
-        <Button variant="primary" type="submit" className="mt-3">Book Now</Button>
+
+        {/* Common Fields for All Services */}
+        <Row>
+          <Col md={6}>
+            <Form.Group controlId="formDate">
+              <Form.Label>Date</Form.Label>
+              <Form.Control type="date" name="date" value={bookingData.date} onChange={handleChange} required />
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group controlId="formTime">
+              <Form.Label>Time</Form.Label>
+              <Form.Control type="time" name="time" value={bookingData.time} onChange={handleChange} required />
+            </Form.Group>
+          </Col>
+        </Row>
+
+        {/* Submit Button */}
+        <Button variant="primary" type="submit" className="mt-4 booking-button">
+          Book Now
+        </Button>
       </Form>
     </Container>
   );
