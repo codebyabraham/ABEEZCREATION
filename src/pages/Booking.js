@@ -9,12 +9,22 @@ const Booking = () => {
     time: '',
     outfits: 1,
     eventDuration: '',
+    customEventDuration: '',
     weddingPackage: '',
     location: '',
   });
 
   const handleChange = (e) => {
     setBookingData({ ...bookingData, [e.target.name]: e.target.value });
+  };
+
+  const handleEventDurationChange = (e) => {
+    const value = e.target.value;
+    setBookingData({
+      ...bookingData,
+      eventDuration: value,
+      customEventDuration: value === 'Other' ? '' : bookingData.customEventDuration, // Reset custom duration if not 'Other'
+    });
   };
 
   const handleBooking = (e) => {
@@ -66,15 +76,35 @@ const Booking = () => {
         )}
 
         {bookingData.serviceType === 'Event' && (
-          <Form.Group controlId="formEventDuration">
-            <Form.Label>Event Duration</Form.Label>
-            <Form.Control as="select" name="eventDuration" value={bookingData.eventDuration} onChange={handleChange}>
+          <>
+            <Form.Group controlId="formEventDuration">
+              <Form.Label>Event Duration</Form.Label>
+              <Form.Control as="select" name="eventDuration" value={bookingData.eventDuration} onChange={handleEventDurationChange}>
               <option>1 Hour</option>
               <option>2 Hours</option>
+              <option>3 Hours</option>
+              <option>4 Hours</option>
+              <option>5 hours</option>
               <option>Half Day</option>
               <option>Full Day</option>
-            </Form.Control>
-          </Form.Group>
+              <option>Other</option> {/* Add "Other" option */}
+              </Form.Control>
+            </Form.Group>
+
+            {/* Show input field if 'Other' is selected for Event Duration */}
+            {bookingData.eventDuration === 'Other' && (
+              <Form.Group controlId="formCustomEventDuration">
+                <Form.Label>Enter Event Duration</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="customEventDuration"
+                  value={bookingData.customEventDuration}
+                  onChange={handleChange}
+                  placeholder="Enter custom duration (e.g., 3 hours)"
+                />
+              </Form.Group>
+            )}
+          </>
         )}
 
         {/* Location Selection (Disabled if Service Type is Wedding) */}
