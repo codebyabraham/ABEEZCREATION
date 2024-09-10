@@ -43,16 +43,26 @@ import twosix from '../images/30.jpg';
 
 
 
-import eightyone from '../images/81.jpg';
-import eightytwo from '../images/82.jpg';
-import eightythree from '../images/83.jpg';
-import eightyfour from '../images/84.jpg';
-import eightyfive from '../images/85.jpg';
-import eightysix from '../images/86.jpg';
-import eightyseven from '../images/87.jpg';
-import eightyeight from '../images/88.jpg';
-import eightynine from '../images/89.jpg';
-import ninety from '../images/90.jpg';
+import eightyone from '../images/31.jpg';
+import eightytwo from '../images/32.jpg';
+import eightythree from '../images/33.jpg';
+import eightyfour from '../images/34.jpg';
+import eightyfive from '../images/35.jpg';
+import eightysix from '../images/36.jpg';
+import eightyseven from '../images/37.jpg';
+import eightyeight from '../images/38.jpg';
+import eightynine from '../images/39.jpg';
+import ninety from '../images/40.jpg';
+import ninetyone from '../images/41.jpg';
+import ninetytwo from '../images/42.jpg';
+import ninetythree from '../images/43.jpg';
+import ninetyfour from '../images/44.jpg';
+import ninetyfive from '../images/45.jpg';
+import ninetysix from '../images/46.jpg';
+import ninetyseven from '../images/47.jpg';
+import ninetyeight from '../images/48.jpg';
+import ninetynine from '../images/49.jpg';
+import hun from '../images/50.jpg';
 
 
 import sixtyone from '../images/61.jpg';
@@ -121,6 +131,16 @@ const portfolioData = {
     eightyeight,
     eightynine,
     ninety,
+    ninetyone, 
+    ninetytwo,   
+    ninetythree, 
+    ninetyfour,
+    ninetyfive,
+    ninetysix, 
+    ninetyseven, 
+    ninetyeight, 
+    ninetynine,
+    hun,  
     // Add more wedding images
   ],
   photowalks: [
@@ -154,6 +174,8 @@ const Portfolio = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedSegment, setSelectedSegment] = useState('');
   const [selectedImages, setSelectedImages] = useState([]);
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
 
   // Function to handle opening the modal
   const handleShowModal = (segment) => {
@@ -164,6 +186,15 @@ const Portfolio = () => {
 
   // Function to handle closing the modal
   const handleCloseModal = () => setShowModal(false);
+
+  // Function to handle clicking on an image for better display
+  const handleImageClick = (image) => {
+    setCurrentImage(image);
+    setShowImageModal(true);
+  };
+
+  // Function to handle closing the image modal
+  const handleCloseImageModal = () => setShowImageModal(false);
 
   return (
     <Container className="mt-5 portfolio-container">
@@ -212,13 +243,37 @@ const Portfolio = () => {
           <Row>
             {selectedImages.map((image, index) => (
               <Col md={4} key={index} className="mb-4">
-                <Image src={image} fluid className="portfolio-image" />
+                <Image
+                  src={image}
+                  fluid
+                  className="portfolio-image"
+                  onClick={() => handleImageClick(image)} // Open image display modal on image click
+                  style={{ cursor: 'pointer' }}
+                />
               </Col>
             ))}
           </Row>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* Modal for Improved Image Display */}
+      <Modal show={showImageModal} onHide={handleCloseImageModal} size="lg" centered>
+        <Modal.Body className="d-flex justify-content-center align-items-center">
+          {currentImage && (
+            <Image
+              src={currentImage}
+              fluid
+              style={{ maxHeight: '80vh', maxWidth: '100%' }} // Set max dimensions for better display
+            />
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseImageModal}>
             Close
           </Button>
         </Modal.Footer>
