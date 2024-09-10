@@ -1,31 +1,34 @@
-// src/components/Navbar.js
-
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import '../App.css'; // Import your custom CSS
 
 const NavigationBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" className="navbar-custom">
       <Container>
-        <Navbar.Brand href="/">ABEEZCREATION</Navbar.Brand>
+        {/* Brand Name */}
+        <Navbar.Brand href="/" className="navbar-brand-name">
+          ABEEZCREATION
+        </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav className="ms-auto">
             <LinkContainer to="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link className="nav-link-custom">Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/portfolio">
-              <Nav.Link>Portfolio</Nav.Link>
+              <Nav.Link className="nav-link-custom">Portfolio</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/packages">
-              <Nav.Link>Packages</Nav.Link>
+              <Nav.Link className="nav-link-custom">Packages</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/booking">
-              <Nav.Link>Booking</Nav.Link>
+              <Nav.Link className="nav-link-custom">Booking</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contact">
-              <Nav.Link>Contact</Nav.Link>
+              <Nav.Link className="nav-link-custom">Contact</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

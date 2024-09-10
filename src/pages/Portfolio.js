@@ -35,6 +35,12 @@ import oneten from '../images/22.jpg';
 import oneeleven from '../images/23.jpg';
 import onetwelve from '../images/24.jpg';
 import twoone from '../images/25.jpg';
+import twotwo from '../images/26.jpg';
+import twothree from '../images/27.jpg';
+import twofour from '../images/28.jpg';
+import twofive from '../images/29.jpg';
+import twosix from '../images/30.jpg';
+
 
 
 import eightyone from '../images/81.jpg';
@@ -42,6 +48,11 @@ import eightytwo from '../images/82.jpg';
 import eightythree from '../images/83.jpg';
 import eightyfour from '../images/84.jpg';
 import eightyfive from '../images/85.jpg';
+import eightysix from '../images/86.jpg';
+import eightyseven from '../images/87.jpg';
+import eightyeight from '../images/88.jpg';
+import eightynine from '../images/89.jpg';
+import ninety from '../images/90.jpg';
 
 
 import sixtyone from '../images/61.jpg';
@@ -93,7 +104,11 @@ const portfolioData = {
     oneeleven,
     onetwelve,
     twoone,
-    // Add more portrait images
+    twotwo, 
+    twothree,
+    twofour, 
+    twofive, 
+    twosix
   ],
   weddings: [
     eightyone,
@@ -101,6 +116,11 @@ const portfolioData = {
     eightythree,
     eightyfour,
     eightyfive,
+    eightysix,
+    eightyseven,
+    eightyeight,
+    eightynine,
+    ninety,
     // Add more wedding images
   ],
   photowalks: [
@@ -124,7 +144,7 @@ const portfolioData = {
     seventytwo,
     seventythree,
     seventyfour,
-    seventyfour,
+    seventyfive,
     // Add more TWS images
   ],
 };

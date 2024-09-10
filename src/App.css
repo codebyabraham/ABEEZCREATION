@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+/* NAVBAR */
+/* Navbar Styling */
+.navbar-custom {
+  background-color: #f8f9fa; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a modern look */
+  padding: 10px 0;
+}
+
+/* Brand Name Styling */
+.navbar-brand-name {
+  font-family: 'SUSE';/* Modern, clean font */
+  font-weight: bold; /* Bold text for emphasis */
+  font-size: 1.5rem; /* Slightly larger text for brand */
+  color: #333; /* Dark color for brand name */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover Effect for Brand Name */
+.navbar-brand-name:hover {
+  color: #c9daeb; 
+  text-decoration: none; 
+}
+
+.nav-link-custom {
+  color: #555; 
+  font-family: 'SUSE';
+  padding: 8px 15px;
+  margin: 0 5px;
+  transition: color 0.3s, background-color 0.3s; 
+}
+
+.nav-link-custom:hover {
+  color: #fff; 
+  background-color: #7a8693; 
+  border-radius: 5px; 
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff;
+  border-radius: 5px;
+}
+
+.navbar-toggler {
+  border-color: #007bff; 
+}
+
+
+
+
+
+
+/* FOOTER */
 footer {
     background-color: #f8f9fa;
     padding: 20px 0;
