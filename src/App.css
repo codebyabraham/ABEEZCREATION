@@ -3,16 +3,16 @@
 /* Navbar Styling */
 .navbar-custom {
   background-color: #f8f9fa; /* Light background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a modern look */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   padding: 10px 0;
 }
 
 /* Brand Name Styling */
 .navbar-brand-name {
-  font-family: 'SUSE';/* Modern, clean font */
-  font-weight: bold; /* Bold text for emphasis */
-  font-size: 1.5rem; /* Slightly larger text for brand */
-  color: #333; /* Dark color for brand name */
+  font-family: 'SUSE';
+  font-weight: bold; 
+  font-size: 1.5rem;
+  color: #333; 
   transition: color 0.3s; /* Smooth transition for hover */
 }
 
@@ -23,7 +23,7 @@
 }
 
 .nav-link-custom {
-  color: #555; 
+  /* color: #555;  */
   font-family: 'SUSE';
   padding: 8px 15px;
   margin: 0 5px;
@@ -32,7 +32,6 @@
 
 .nav-link-custom:hover {
   color: #fff; 
-  background-color: #7a8693; 
   border-radius: 5px; 
 }
 
