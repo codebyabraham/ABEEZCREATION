@@ -87,7 +87,7 @@ const Booking = () => {
               <option>5 hours</option>
               <option>Half Day</option>
               <option>Full Day</option>
-              <option>Other</option> {/* Add "Other" option */}
+              <option>Other</option> 
               </Form.Control>
             </Form.Group>
 

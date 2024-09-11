@@ -2,6 +2,8 @@
 
 body {
     font-family: 'SUSE', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* General Container */
@@ -60,6 +62,7 @@ body {
     border-radius: 8px;
     padding: 20px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover {
@@ -98,33 +101,83 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Light and Dark Mode Variables */
-:root {
-    --hero-bg-color: #f8f9fa;
-    --hero-text-color: #333;
-    --hero-subtitle-color: #6c757d;
-    --services-bg-color: #fff;
-    --card-bg-color: #f4f4f4;
-    --card-text-color: #333;
-    --card-hover-bg-color: #e9ecef;
-    --card-hover-text-color: #000;
-    --cta-bg-color: #007bff;
-    --cta-text-color: #fff;
-    --services-title-color: #343a40;
-    --service-title-color: #007bff;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 0 10px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .services-section {
+        padding: 30px 10px;
+    }
+
+    .services-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .cta-section {
+        padding: 30px 10px;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
 }
 
-.dark-mode {
-    --hero-bg-color: #333;
-    --hero-text-color: #f4f4f4;
-    --hero-subtitle-color: #aaa;
-    --services-bg-color: #444;
-    --card-bg-color: #555;
-    --card-text-color: #f4f4f4;
-    --card-hover-bg-color: #666;
-    --card-hover-text-color: #fff;
-    --cta-bg-color: #0056b3;
-    --cta-text-color: #fff;
-    --services-title-color: #f4f4f4;
-    --service-title-color: #00aaff;
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-button {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    .service-card {
+        padding: 12px;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
 }

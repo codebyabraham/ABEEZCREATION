@@ -319,7 +319,7 @@ const Portfolio = () => {
                   src={image}
                   fluid
                   className="portfolio-image"
-                  onClick={() => handleImageClick(image)} // Open image display modal on image click
+                  onClick={() => handleImageClick(image)} 
                   style={{ cursor: 'pointer' }}
                 />
               </Col>
@@ -340,7 +340,7 @@ const Portfolio = () => {
             <Image
               src={currentImage}
               fluid
-              style={{ maxHeight: '80vh', maxWidth: '100%' }} // Set max dimensions for better display
+              style={{ maxHeight: '80vh', maxWidth: '100%' }} 
             />
           )}
         </Modal.Body>
