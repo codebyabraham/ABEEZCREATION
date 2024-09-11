@@ -110,6 +110,82 @@
   border: none;
 }
 
+/* CONTACT */
+/* Contact Form Styles */
+.contact-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: #f4f4f4; /* Light grey background */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.contact-container h2 {
+  color: #333; /* Darker text for heading */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contact-form-label {
+  font-weight: bold;
+  color: #555; /* Slightly muted text color */
+  margin-bottom: 5px;
+}
+
+.contact-form-control {
+  border: 2px solid #ddd; /* Lighter border */
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition on focus */
+}
+
+.contact-form-control:focus {
+  border-color: #007bff; /* Bootstrap primary color */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.contact-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s; /* Button hover effects */
+}
+
+.contact-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.contact-button:active {
+  background-color: #004080; /* Even darker blue when clicked */
+  transform: translateY(1px); /* Clicked effect */
+}
+
+.contact-form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form-group .required {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px; 
+}
+
+@media (max-width: 768px) {
+  /* Mobile Responsive Styles */
+  .contact-container {
+    padding: 20px;
+  }
+  
+  .contact-button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
 
 
 

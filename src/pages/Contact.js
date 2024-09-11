@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import '../App.css'; // Ensure this is imported
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    phone: '',
+    about: '',
     message: '',
+    instagram: '',
+    referral: '',
   });
 
   const handleChange = (e) => {
@@ -19,22 +25,140 @@ const Contact = () => {
   };
 
   return (
-    <Container className="mt-5">
-      <h2 className="text-center">Contact Us</h2>
+    <Container className="contact-container">
+      <h2 className="text-center mb-4">Contact Us</h2>
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} required />
+        <Row>
+          {/* First Name */}
+          <Col md={6}>
+            <Form.Group controlId="formFirstName" className="contact-form-group">
+              <Form.Label className="contact-form-label">
+                First Name <span className="required">*</span>
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+                placeholder="Enter your first name"
+                className="contact-form-control"
+              />
+            </Form.Group>
+          </Col>
+          
+          {/* Last Name */}
+          <Col md={6}>
+            <Form.Group controlId="formLastName" className="contact-form-group">
+              <Form.Label className="contact-form-label">
+                Last Name <span className="required">*</span>
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+                placeholder="Enter your last name"
+                className="contact-form-control"
+              />
+            </Form.Group>
+          </Col>
+        </Row>
+
+        {/* Email */}
+        <Form.Group controlId="formEmail" className="contact-form-group">
+          <Form.Label className="contact-form-label">
+            Email <span className="required">*</span>
+          </Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            placeholder="Enter your email"
+            className="contact-form-control"
+          />
         </Form.Group>
-        <Form.Group controlId="formEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" name="email" value={formData.email} onChange={handleChange} required />
+
+        {/* Phone Number */}
+        <Form.Group controlId="formPhone" className="contact-form-group">
+          <Form.Label className="contact-form-label">
+            Phone Number <span className="required">*</span>
+          </Form.Label>
+          <Form.Control
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            placeholder="Enter your phone number"
+            className="contact-form-control"
+          />
         </Form.Group>
-        <Form.Group controlId="formMessage">
-          <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" rows={4} name="message" value={formData.message} onChange={handleChange} required />
+
+        {/* About Section */}
+        <Form.Group controlId="formAbout" className="contact-form-group">
+          <Form.Label className="contact-form-label">Tell us a little about yourself</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            name="about"
+            value={formData.about}
+            onChange={handleChange}
+            placeholder="Share something about yourself"
+            className="contact-form-control"
+          />
         </Form.Group>
-        <Button variant="primary" type="submit" className="mt-3">Send Message</Button>
+
+        {/* Your Message */}
+        <Form.Group controlId="formMessage" className="contact-form-group">
+          <Form.Label className="contact-form-label">
+            Your Message <span className="required">*</span>
+          </Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={4}
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            placeholder="Write your message here"
+            className="contact-form-control"
+          />
+        </Form.Group>
+
+        {/* Instagram Handle */}
+        <Form.Group controlId="formInstagram" className="contact-form-group">
+          <Form.Label className="contact-form-label">Instagram Handle</Form.Label>
+          <Form.Control
+            type="text"
+            name="instagram"
+            value={formData.instagram}
+            onChange={handleChange}
+            placeholder="Your Instagram username"
+            className="contact-form-control"
+          />
+        </Form.Group>
+
+        {/* Referral Section */}
+        <Form.Group controlId="formReferral" className="contact-form-group">
+          <Form.Label className="contact-form-label">Where did you hear about us?</Form.Label>
+          <Form.Control
+            type="text"
+            name="referral"
+            value={formData.referral}
+            onChange={handleChange}
+            placeholder="e.g., Google, Instagram, Friend, etc."
+            className="contact-form-control"
+          />
+        </Form.Group>
+
+        {/* Submit Button */}
+        <Button variant="primary" type="submit" className="contact-button mt-4">
+          Send Message
+        </Button>
       </Form>
     </Container>
   );
