@@ -27,6 +27,9 @@ const NavigationBar = () => {
             <LinkContainer to="/booking">
               <Nav.Link className="nav-link-custom">Booking</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/artspace">
+              <Nav.Link className="nav-link-custom">ArtSpace</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/contact">
               <Nav.Link className="nav-link-custom">Contact</Nav.Link>
             </LinkContainer>

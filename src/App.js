@@ -8,7 +8,8 @@ import Portfolio from './pages/Portfolio';
 import Packages from './pages/Packages';
 import Booking from './pages/Booking';
 import Contact from './pages/Contact';
-import Footer from './components/Footer'; // Import Footer
+import Footer from './components/Footer'; 
+import ArtSpace from './pages/ArtSpace';
 
 const App = () => {
   return (
@@ -20,8 +21,9 @@ const App = () => {
         <Route path="/packages" element={<Packages />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/artspace" element={<ArtSpace />} />
       </Routes>
-      <Footer /> {/* Add Footer here */}
+      <Footer />
     </Router>
   );
 };
