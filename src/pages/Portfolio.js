@@ -80,21 +80,47 @@ import sixtytwo from '../images/62.jpg';
 import sixtythree from '../images/63.jpg';
 import sixtyfour from '../images/64.jpg';
 import sixtyfive from '../images/65.jpg';
+import sixtysix from '../images/66.jpg';
+import sixtyseven from '../images/67.jpg';
+import sixtyeight from '../images/68.jpg';
+import sixtynine from '../images/69.jpg';
+import sixtyten from '../images/70.jpg';
+import sixtytenone from '../images/71.jpg';
+import sixtytentwo from '../images/72.jpg';
+import sixtytenthree from '../images/73.jpg';
+import sixtytenfour from '../images/74.jpg';
+import sixtytenfive from '../images/75.jpg';
+import sixtytensix from '../images/76.jpg';
+import sixtytenseven from '../images/77.jpg';
+import sixtyteneight from '../images/78.jpg';
+import sixtytennine from '../images/79.jpg';
+import sixtytenten from '../images/80.jpg';
 
 
-import fiftyone from '../images/51.jpg';
-import fiftytwo from '../images/52.jpg';
-import fiftythree from '../images/53.jpg';
-import fiftyfour from '../images/54.jpg';
-import fiftyfive from '../images/55.jpg';
+import fiftyone from '../images/81.jpg';
+import fiftytwo from '../images/82.jpg';
+import fiftythree from '../images/83.jpg';
+import fiftyfour from '../images/84.jpg';
+import fiftyfive from '../images/85.jpg';
+import fiftysix from '../images/86.jpg';
+import fiftyseven from '../images/87.jpg';
+import fiftyeight from '../images/88.jpg';
+import fiftynine from '../images/89.jpg';
 
 
 
-import seventyone from '../images/71.jpg';
-import seventytwo from '../images/72.jpg';
-import seventythree from '../images/73.jpg';
-import seventyfour from '../images/74.jpg';
-import seventyfive from '../images/75.jpg';
+
+import seventyone from '../images/90.jpg';
+import seventytwo from '../images/91.jpg';
+import seventythree from '../images/92.jpg';
+import seventyfour from '../images/93.jpg';
+import seventyfive from '../images/94.jpg';
+import seventysix from '../images/95.jpg';
+import seventyseven from '../images/96.jpg';
+import seventyeight from '../images/97.jpg';
+import seventynine from '../images/98.jpg';
+import seventyten from '../images/99.jpg';
+import seventy from '../images/100.jpg';
 
 // PortfolioData
 const portfolioData = {
@@ -165,19 +191,38 @@ const portfolioData = {
     // Add more wedding images
   ],
   events: [
-    sixtyone,
-    sixtytwo,
-    sixtythree,
-    sixtyfour,
-    sixtyfive,
+    sixtyone, 
+    sixtytwo, 
+    sixtythree, 
+    sixtyfour, 
+    sixtyfive, 
+    sixtysix, 
+    sixtyseven, 
+    sixtyeight, 
+    sixtynine, 
+    sixtyten, 
+    sixtytenone, 
+    sixtytentwo, 
+    sixtytenthree, 
+    sixtytenfour, 
+    sixtytenfive, 
+    sixtytensix, 
+    sixtytenseven, 
+    sixtyteneight, 
+    sixtytennine, 
+    sixtytenten, 
      // Add more photowalk images
   ],
   photowalks: [
-     fiftyone,
+    fiftyone,
     fiftytwo,
     fiftythree,
     fiftyfour,
     fiftyfive,
+    fiftysix, 
+    fiftyseven, 
+    fiftyeight, 
+    fiftynine
     // Add more event images
    ],
   tws: [
@@ -186,6 +231,12 @@ const portfolioData = {
     seventythree,
     seventyfour,
     seventyfive,
+    seventysix, 
+    seventyseven, 
+    seventyeight, 
+    seventynine, 
+    seventyten, 
+    seventy,  
     // Add more TWS images
   ],
 };
