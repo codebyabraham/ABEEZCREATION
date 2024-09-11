@@ -1,80 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
-body{
-    font-family:'SUSE'
-}
 
+body {
+    font-family: 'SUSE', sans-serif;
+}
 
 /* General Container */
 .home-container {
     max-width: 1200px;
     margin: auto;
-    padding: 0 15px;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background-color: #f8f9fa;
-    border-radius: 10px;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--hero-bg-color);
+    color: var(--hero-text-color);
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hero-title {
-    font-size: 2.8rem;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #343a40;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-    color: #6c757d;
-  }
-  
-  .hero-button {
-    padding: 10px 30px;
-    font-size: 1.1rem;
-    border-radius: 25px;
-  }
-  
-  /* Services Section */
-  .services-section h2 {
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--hero-subtitle-color);
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--services-bg-color);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 5rem;
+}
+
+.services-section h2 {
     font-size: 2.2rem;
-    color: #343a40;
-  }
-  
-  .service-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .service-card:hover {
+    color: var(--services-title-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.service-card {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+
+.service-card:hover {
+    background-color: var(--card-hover-bg-color);
+    color: var(--card-hover-text-color);
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-title {
-    color: #007bff;
+}
+
+.service-title {
     font-size: 1.5rem;
     margin-bottom: 15px;
-  }
-  
-  /* CTA Section */
-  .cta-section {
-    background-color: #007bff;
-    color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cta-title {
+    color: var(--service-title-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--cta-bg-color);
+    color: var(--cta-text-color);
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.cta-title {
     font-size: 2rem;
     font-weight: bold;
-  }
-  
-  .cta-button {
+    margin-bottom: 1rem;
+}
+
+.cta-button {
     padding: 12px 30px;
     font-size: 1.2rem;
     border-radius: 30px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  }
-  
+}
+
+/* Light and Dark Mode Variables */
+:root {
+    --hero-bg-color: #f8f9fa;
+    --hero-text-color: #333;
+    --hero-subtitle-color: #6c757d;
+    --services-bg-color: #fff;
+    --card-bg-color: #f4f4f4;
+    --card-text-color: #333;
+    --card-hover-bg-color: #e9ecef;
+    --card-hover-text-color: #000;
+    --cta-bg-color: #007bff;
+    --cta-text-color: #fff;
+    --services-title-color: #343a40;
+    --service-title-color: #007bff;
+}
+
+.dark-mode {
+    --hero-bg-color: #333;
+    --hero-text-color: #f4f4f4;
+    --hero-subtitle-color: #aaa;
+    --services-bg-color: #444;
+    --card-bg-color: #555;
+    --card-text-color: #f4f4f4;
+    --card-hover-bg-color: #666;
+    --card-hover-text-color: #fff;
+    --cta-bg-color: #0056b3;
+    --cta-text-color: #fff;
+    --services-title-color: #f4f4f4;
+    --service-title-color: #00aaff;
+}

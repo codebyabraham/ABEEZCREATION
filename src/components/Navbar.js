@@ -1,9 +1,10 @@
+// src/components/NavigationBar.js
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import '../App.css'; // Import your custom CSS
 
-const NavigationBar = () => {
+const NavigationBar = ({ toggleDarkMode, darkMode }) => {
   return (
     <Navbar expand="lg" className="navbar-custom">
       <Container>
@@ -27,12 +28,19 @@ const NavigationBar = () => {
             <LinkContainer to="/booking">
               <Nav.Link className="nav-link-custom">Booking</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/artspace">
-              <Nav.Link className="nav-link-custom">ArtSpace</Nav.Link>
-            </LinkContainer>
             <LinkContainer to="/contact">
               <Nav.Link className="nav-link-custom">Contact</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/artspace">
+              <Nav.Link className="nav-link-custom">ArtSpace</Nav.Link>
+            </LinkContainer>
+            {/* Dark Mode Toggle Switch */}
+            <div className="dark-mode-toggle">
+              <label className="switch">
+                <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
+                <span className="slider"></span>
+              </label>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
