@@ -63,6 +63,16 @@ import ninetyseven from '../images/47.jpg';
 import ninetyeight from '../images/48.jpg';
 import ninetynine from '../images/49.jpg';
 import hun from '../images/50.jpg';
+import hunone from '../images/51.jpg';
+import huntwo from '../images/52.jpg';
+import hunthree from '../images/53.jpg';
+import hunfour from '../images/54.jpg';
+import hunfive from '../images/55.jpg';
+import hunsix from '../images/56.jpg';
+import hunseven from '../images/57.jpg';
+import huneight from '../images/58.jpg';
+import hunnine from '../images/59.jpg';
+import hunten from '../images/60.jpg';
 
 
 import sixtyone from '../images/61.jpg';
@@ -140,25 +150,36 @@ const portfolioData = {
     ninetyseven, 
     ninetyeight, 
     ninetynine,
-    hun,  
+    hun,
+    hunone, 
+    huntwo, 
+    hunthree, 
+    hunfour, 
+    hunfive, 
+    hunsix, 
+    hunseven, 
+    huneight, 
+    hunnine, 
+    hunten 
+
     // Add more wedding images
   ],
-  photowalks: [
-   sixtyone,
-   sixtytwo,
-   sixtythree,
-   sixtyfour,
-   sixtyfive,
-    // Add more photowalk images
-  ],
   events: [
-    fiftyone,
+    sixtyone,
+    sixtytwo,
+    sixtythree,
+    sixtyfour,
+    sixtyfive,
+     // Add more photowalk images
+  ],
+  photowalks: [
+     fiftyone,
     fiftytwo,
     fiftythree,
     fiftyfour,
     fiftyfive,
     // Add more event images
-  ],
+   ],
   tws: [
     seventyone,
     seventytwo,

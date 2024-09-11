@@ -5,14 +5,14 @@ import { Container, Row, Col, Image, Modal, Button } from 'react-bootstrap';
 import './Packages.css'; // Import custom CSS for additional styling
 
 // Import package images
-import package1 from '../images/1a.jpg';
-import package2 from '../images/1b.jpg';
-import package3 from '../images/1c.jpg';
-import package4 from '../images/1d.jpg';
-import package5 from '../images/1e.jpg';
-import package6 from '../images/1f.jpg';
-import package7 from '../images/1g.jpg';
-import package8 from '../images/1h.jpg';
+import package1 from '../images/0a.jpg';
+import package2 from '../images/0b.jpg';
+import package3 from '../images/0c.jpg';
+import package4 from '../images/0d.jpg';
+import package5 from '../images/0e.jpg';
+import package6 from '../images/0f.jpg';
+import package7 from '../images/0g.jpg';
+import package8 from '../images/0h.jpg';
 
 // Add more package imports as needed
 
