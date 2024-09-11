@@ -10,7 +10,7 @@ const Home = () => {
       <section className="hero-section text-center py-5 mb-5">
         <h1 className="hero-title mb-3">Welcome to ABEEZCREATION</h1>
         <p className="hero-subtitle mb-4">Capturing Moments That Last Forever</p>
-        <Button as={Link} to="/portfolio" variant="dark" className="mt-3 hero-button">
+        <Button as={Link} to="/portfolio" variant="primary" className="mt-3 hero-button">
           View Portfolio
         </Button>
       </section>
